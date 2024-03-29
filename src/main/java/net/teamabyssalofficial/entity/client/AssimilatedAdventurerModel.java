@@ -3,6 +3,7 @@ package net.teamabyssalofficial.entity.client;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import net.minecraft.client.model.HumanoidModel;
+import net.minecraft.client.model.ParrotModel;
 import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.geom.PartPose;
@@ -241,7 +242,7 @@ public class AssimilatedAdventurerModel<T extends AssimilatedAdventurerEntity> e
 			this.left_arm.xRot = Mth.cos(limbSwing * 0.8F) * -0.8F * limbSwingAmount;
 		}
 
-		if (!(limbSwingAmount > -0.15F && limbSwingAmount < 0.15F)){
+		if (!(limbSwingAmount > -0.15F && limbSwingAmount < 0.15F)) {
 			this.right_arm.zRot = 0;
 			this.left_arm.zRot = 0;
 
@@ -253,8 +254,8 @@ public class AssimilatedAdventurerModel<T extends AssimilatedAdventurerEntity> e
 			speed = 1.25F;
 		}
 
-		this.left_leg.xRot = Mth.cos(limbSwing * 0.8F) * 0.8F * limbSwingAmount;
-		this.right_leg.xRot = Mth.cos(limbSwing * 0.8F) * -0.8F * limbSwingAmount;
+		this.left_leg.xRot = Mth.cos(limbSwing * 0.8F) * 0.9F * limbSwingAmount;
+		this.right_leg.xRot = Mth.cos(limbSwing * 0.8F) * -0.9F * limbSwingAmount;
 
 	}
 

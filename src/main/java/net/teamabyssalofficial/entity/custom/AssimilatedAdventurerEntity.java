@@ -32,6 +32,7 @@ import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.AABB;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -67,6 +68,8 @@ public class AssimilatedAdventurerEntity extends Mutated {
         }
         super.customServerAiStep();
     }
+
+
 
 
     @Override
@@ -216,6 +219,7 @@ public class AssimilatedAdventurerEntity extends Mutated {
 
 
     public void aiStep() {
+
         super.aiStep();
         Entity attackTarget = this.getTarget();
         Item item = this.getMainHandItem().getItem();

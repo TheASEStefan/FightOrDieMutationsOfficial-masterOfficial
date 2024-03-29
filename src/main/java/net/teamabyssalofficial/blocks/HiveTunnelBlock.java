@@ -12,7 +12,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
-import net.teamabyssalofficial.constants.FDMSoundType;
+import net.teamabyssalofficial.constants.SoundTypeLibrary;
 import net.teamabyssalofficial.entity.custom.ShillerEntity;
 import net.teamabyssalofficial.registry.EffectRegistry;
 import net.teamabyssalofficial.registry.EntityRegistry;
@@ -21,7 +21,7 @@ import net.teamabyssalofficial.registry.WorldDataRegistry;
 public class HiveTunnelBlock extends Block {
 
     public HiveTunnelBlock(Properties pProperties) {
-        super(pProperties.sound(FDMSoundType.HIVE_SOUNDS));
+        super(pProperties.sound(SoundTypeLibrary.HIVE_SOUNDS));
     }
 
     @Override

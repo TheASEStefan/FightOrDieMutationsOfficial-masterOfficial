@@ -7,19 +7,15 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraftforge.common.util.ForgeSoundType;
-import net.teamabyssalofficial.constants.FDMSoundType;
+import net.teamabyssalofficial.constants.SoundTypeLibrary;
 import net.teamabyssalofficial.registry.EffectRegistry;
 import net.teamabyssalofficial.registry.EntityRegistry;
-import org.jetbrains.annotations.Nullable;
 
 public class HiveBlock extends Block {
     public HiveBlock(Properties pProperties) {
-        super(pProperties.sound(FDMSoundType.HIVE_SOUNDS));
+        super(pProperties.sound(SoundTypeLibrary.HIVE_SOUNDS));
     }
 
     @Override
