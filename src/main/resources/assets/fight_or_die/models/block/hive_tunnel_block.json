@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "bottom": "fight_or_die:block/hive_block",
+    "side": "fight_or_die:block/hive_block",
+    "top": "fight_or_die:block/hive_tunnel_block"
+  }
+}

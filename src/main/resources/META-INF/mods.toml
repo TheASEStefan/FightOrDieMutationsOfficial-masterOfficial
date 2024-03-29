@@ -1,0 +1,72 @@
+# This is an example mods.toml file. It contains the data relating to the loading mods.
+# There are several mandatory fields (#mandatory), and many more that are optional (#optional).
+# The overall format is standard TOML format, v0.5.0.
+# Note that there are a couple of TOML lists in this file.
+# Find more information on toml format here:  https://github.com/toml-lang/toml
+# The name of the mod loader type to load - for regular FML @Mod mods it should be javafml
+modLoader="javafml" #mandatory
+# A version range to match for said mod loader - for regular FML @Mod it will be the forge version
+loaderVersion="[41,)" #mandatory This is typically bumped every Minecraft version by Forge. See our download page for lists of versions.
+# The license for you mod. This is mandatory metadata and allows for easier comprehension of your redistributive properties.
+# Review your options at https://choosealicense.com/. All rights reserved is the default copyright stance, and is thus the default here.
+license="MIT License"
+# A URL to refer people to when problems occur with this mod
+#issueTrackerURL="https://change.me.to.your.issue.tracker.example.invalid/" #optional
+# A list of mods - how many allowed here is determined by the individual mod loader
+[[mods]] #mandatory
+# The modid of the mod
+modId="fight_or_die" #mandatory
+# The version number of the mod - there's a few well known ${} variables useable here or just hardcode it
+# ${file.jarVersion} will substitute the value of the Implementation-Version as read from the mod's JAR file metadata
+# see the associated build.gradle script for how to populate this completely automatically during a build
+version="1.20.1-1.1.2" #mandatory
+# A display name for the mod
+displayName="Fight or Die Mutations" #mandatory
+# A URL to query for updates for this mod. See the JSON update specification https://mcforge.readthedocs.io/en/latest/gettingstarted/autoupdate/
+#updateJSONURL="https://change.me.example.invalid/updates.json" #optional
+# A URL for the "homepage" for this mod, displayed in the mod UI
+#displayURL="https://change.me.to.your.mods.homepage.example.invalid/" #optional
+# A file name (in the root of the mod JAR) containing a logo for display
+logoFile="logo.png" #optional
+# A text field displayed in the mod UI
+credits="In the memory of mutationcraft" #optional
+# A text field displayed in the mod UI
+authors="ASEStefan, TeamAbyssal" #optional
+# Display Test controls the display for your mod in the server connection screen
+# MATCH_VERSION means that your mod will cause a red X if the versions on client and server differ. This is the default behaviour and should be what you choose if you have server and client elements to your mod.
+# IGNORE_SERVER_VERSION means that your mod will not cause a red X if it's present on the server but not on the client. This is what you should use if you're a server only mod.
+# IGNORE_ALL_VERSION means that your mod will not cause a red X if it's present on the client or the server. This is a special case and should only be used if your mod has no server component.
+# NONE means that no display test is set on your mod. You need to do this yourself, see IExtensionPoint.DisplayTest for more information. You can define any scheme you wish with this value.
+# IMPORTANT NOTE: this is NOT an instruction as to which environments (CLIENT or DEDICATED SERVER) your mod loads on. Your mod should load (and maybe do nothing!) whereever it finds itself.
+#displayTest="MATCH_VERSION" # MATCH_VERSION is the default if nothing is specified (#optional)
+
+# The description text for the mod (multi line!) (#mandatory)
+description='''
+Welcome to Fight or Die: Mutations (FDM). This mod will bring chaos into your world and it'll slowly erupt. When joining a new world, you'll be greeted with a message that points out something while a sound plays: "Zero"? What's that you ask while enjoying a casual minecraft game like usual. After some time another one of those creepy messages appears: "First"? You start to panic and slowly the world you loved turns into pure madness. Welcome to FDM! This mod brings mutations and parasites into the game that can evolve, adapt, merge and they can get stronger as... time goes on? Some of these monsters have unique abilities to counter whatever you have. So get it together and start fighting because there's only a chance... a slim chance... that you will get to live another day instead of being gone forever, tormented by these vile creatures. What is their weakness you wonder? Fire. Fire's very efficient against them because they are smart, fast in water and can dive to you and some can teleport or explode, so use FIRE because it deals more damage to them depending on their class.
+
+Note: Fight or Die: Mutations is an official rework of our old mod mutationcraft. This mod has more capacity and flexibility than the other being made in Java and not MCreator. It also supports: Config Files, support for the assimilated adventurer, better spawning and evolution system, structures and working phase system.
+
+You can find more information about the mod on the official wiki: https://trello.com/b/bhT28pSH/fight-or-die-mutations
+
+I would be very grateful if you would support me on Ko-fi: https://ko-fi.com/asestefan , you don't have to but it would mean the world to me, thanks for listening!
+'''
+# A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
+[[dependencies.fight_or_die]] #optional
+# the modid of the dependency
+modId="forge" #mandatory
+# Does this dependency have to exist - if not, ordering below must be specified
+mandatory=true #mandatory
+# The version range of the dependency
+versionRange="[41,)" #mandatory
+# An ordering relationship for the dependency - BEFORE or AFTER required if the relationship is not mandatory
+ordering="NONE"
+# Side this dependency is applied on - BOTH, CLIENT or SERVER
+side="BOTH"
+# Here's another dependency
+[[dependencies.fight_or_die]]
+modId="minecraft"
+mandatory=true
+# This version range declares a minimum of the current minecraft version up to but not including the next major version
+versionRange="(1.20,1.20.1]"
+ordering="NONE"
+side="BOTH"

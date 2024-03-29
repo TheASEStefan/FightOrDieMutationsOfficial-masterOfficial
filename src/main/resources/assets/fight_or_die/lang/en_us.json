@@ -1,0 +1,134 @@
+{
+
+  "advancements.mutation_slayer1.title": "Mutation Rookie",
+  "advancements.mutation_slayer2.title": "Mutation Destroyer",
+  "advancements.mutation_slayer3.title": "Mutation Veteran",
+
+  "advancements.expert_survivor.title": "Expert Survivor",
+
+  "advancements.mutation_slayer1.descr": "Kill over 100 mutations",
+  "advancements.mutation_slayer2.descr": "Kill over 1000 mutations",
+  "advancements.mutation_slayer3.descr": "Kill over 10000 mutations",
+
+  "advancements.expert_survivor.descr": "Reach the maximum stage of evolution",
+
+  "item.fight_or_die.shiller_spawn_egg": "Shiller Spawn Egg",
+  "item.fight_or_die.springer_spawn_egg": "Springer Spawn Egg",
+
+  "tooltip.fight_or_die.mutation_staff_text": "By hitting an entity with this staff, the entity will turn into it's assimilated counterpart if it has one.",
+  "tooltip.fight_or_die.parascore_text": "When right-clicked, this item will show you the current evolution points in the action bar.",
+
+  "tooltip.fight_or_die.mutated_ender_pearl_text": "When right-clicked, this magical item will teleport all nearby mutations in random locations, giving you the supreme chess power! It's obtained by killing the Mutated Enderman.",
+
+  "tooltip.fight_or_die.addition_device_text": "When right-clicked, this item will grant 1000 evolution points (more or less depending on the configured value).",
+  "tooltip.fight_or_die.subtraction_device_text": "When right-clicked, this item will subtract 1000 evolution points (more or less depending on the configured value).",
+
+  "loot.fight_or_die.melded_flesh_text": "When eaten, this piece of ominous meat will either give you poison for 5 seconds, or subtract 15 evolution points, it's worth a try!",
+
+  "item.fight_or_die.mutated_human_spawn_egg": "Mutated Human Spawn Egg",
+  "item.fight_or_die.mutated_villager_spawn_egg": "Mutated Villager Spawn Egg",
+  "item.fight_or_die.mutated_player_spawn_egg": "Mutated Player Spawn Egg",
+
+  "item.fight_or_die.mutated_human_head_spawn_egg": "Mutated Human Head Spawn Egg",
+  "item.fight_or_die.mutated_villager_head_spawn_egg": "Mutated Villager Head Spawn Egg",
+  "item.fight_or_die.mutated_player_head_spawn_egg": "Mutated Player Head Spawn Egg",
+  "item.fight_or_die.mutated_enderman_head_spawn_egg": "Mutated Enderman Head Spawn Egg",
+  "item.fight_or_die.mutated_creeper_head_spawn_egg": "Mutated Creeper Head Spawn Egg",
+
+  "item.fight_or_die.mutated_cow_spawn_egg": "Mutated Cow Spawn Egg",
+  "item.fight_or_die.mutated_sheep_spawn_egg": "Mutated Sheep Spawn Egg",
+  "item.fight_or_die.mutated_pig_spawn_egg": "Mutated Pig Spawn Egg",
+  "item.fight_or_die.mutated_fox_spawn_egg": "Mutated Fox Spawn Egg",
+
+  "item.fight_or_die.mutated_creeper_spawn_egg": "Mutated Creeper Spawn Egg",
+  "item.fight_or_die.mutated_enderman_spawn_egg": "Mutated Enderman Spawn Egg",
+
+  "item.fight_or_die.primordial_tormenter_spawn_egg": "Primordial Tormenter Spawn Egg",
+  "item.fight_or_die.developed_tormenter_spawn_egg": "Developed Tormenter Spawn Egg",
+  "item.fight_or_die.failed_form_spawn_egg": "Failed Form Spawn Egg",
+
+  "item.fight_or_die.addition_device": "Addition Device",
+  "item.fight_or_die.subtraction_device": "Subtraction Device",
+  "item.fight_or_die.parascore": "Parascore",
+  "item.fight_or_die.mutation_staff": "Mutation Staff",
+
+  "item.fight_or_die.springer_fragment": "Springer Fragment",
+  "item.fight_or_die.ripping_flesh": "Ripping Flesh",
+  "item.fight_or_die.melded_flesh": "Melded Flesh",
+  "item.fight_or_die.sickened_heart": "Sickened Heart",
+  "item.fight_or_die.rotten_brain": "Rotten Brain",
+  "item.fight_or_die.mutated_ender_pearl": "Mutated Ender Pearl",
+
+  "block.fight_or_die.hive_block": "Hive Block",
+  "block.fight_or_die.hive_tunnel_block": "Hive Tunnel",
+
+  "entity.fight_or_die.shiller": "Shiller",
+  "entity.fight_or_die.springer": "Springer",
+  "entity.fight_or_die.mutated_human": "Mutated Human",
+  "entity.fight_or_die.mutated_player": "Mutated Player",
+  "entity.fight_or_die.mutated_villager": "Mutated Villager",
+
+  "entity.fight_or_die.mutated_human_head": "Mutated Human Head",
+  "entity.fight_or_die.mutated_villager_head": "Mutated Villager Head",
+  "entity.fight_or_die.mutated_player_head": "Mutated Player Head",
+  "entity.fight_or_die.mutated_enderman_head": "Mutated Enderman Head",
+  "entity.fight_or_die.mutated_creeper_head": "Mutated Creeper Head",
+
+  "entity.fight_or_die.mutated_cow": "Mutated Cow",
+  "entity.fight_or_die.mutated_sheep": "Mutated Sheep",
+  "entity.fight_or_die.mutated_pig": "Mutated Pig",
+  "entity.fight_or_die.mutated_fox": "Mutated Fox",
+
+  "entity.fight_or_die.mutated_creeper": "Mutated Creeper",
+  "entity.fight_or_die.mutated_enderman": "Mutated Enderman",
+
+  "effect.fight_or_die.hive_sickness": "Hive Sickness",
+  "effect.fight_or_die.fury": "Fury",
+  "effect.fight_or_die.germilis": "Germilis",
+
+  "subtitles.fight_or_die.player_phase0": "Weird sounds are coming from afar...",
+  "subtitles.fight_or_die.player_phase1": "Was I here before?...",
+  "subtitles.fight_or_die.player_phase2": "I've been here too much for my own good...",
+  "subtitles.fight_or_die.player_phase3": "What was that?...",
+  "subtitles.fight_or_die.player_phase4": "I'm starting to get scared, I'm being counted down...",
+  "subtitles.fight_or_die.player_phase5": "...",
+
+  "subtitles.fight_or_die.jumpscare_1": "What was that?",
+  "subtitles.fight_or_die.jumpscare_2": "I'm getting scared!",
+  "subtitles.fight_or_die.jumpscare_3": "Huh?",
+
+  "subtitles.fight_or_die.entity.malruptor.ambient": "Springer shrieks",
+  "subtitles.fight_or_die.entity.malruptor.hurt": "Springer hurts",
+  "subtitles.fight_or_die.entity.malruptor.death": "Springer dies",
+  "subtitles.fight_or_die.entity.malruptor.infect": "Springer infects",
+
+  "subtitles.fight_or_die.entity.mutated_creeper.ambient": "Mutated Creeper growls and fizzles!",
+  "subtitles.fight_or_die.entity.mutated_creeper.death": "Mutated Creeper dies",
+
+  "subtitles.fight_or_die.entity.mutated_enderman.ambient": "Mutated Enderman shrieks",
+  "subtitles.fight_or_die.entity.mutated_enderman.death": "Mutated Enderman dies",
+  "subtitles.fight_or_die.entity.mutated_enderman.hurt": "Mutated Enderman hurts",
+
+  "subtitles.fight_or_die.entity.mutated_enderman_head.ambient": "Walking Head shrieks",
+
+  "subtitles.fight_or_die.entity.mutated_human.ambient": "Mutated Human growls",
+  "subtitles.fight_or_die.entity.mutated_player.ambient": "Mutated Player growls",
+  "subtitles.fight_or_die.entity.mutated_cow.ambient": "Mutated Cow growls",
+  "subtitles.fight_or_die.entity.mutated_sheep.ambient": "Mutated Sheep growls",
+  "subtitles.fight_or_die.entity.mutated_pig.ambient": "Mutated Pig growls",
+  "subtitles.fight_or_die.entity.mutated_fox.ambient": "Mutated Fox screams and howls",
+  "subtitles.fight_or_die.entity.mutated_villager.ambient": "Mutated Villager growls",
+  "subtitles.fight_or_die.entity.mutated.animal.ambient": "Mutated Animal growls",
+
+  "subtitles.fight_or_die.entity.mutated.hurt" : "Mutated hurts",
+  "subtitles.fight_or_die.entity.explosion" : "Mutation explodes",
+  "subtitles.fight_or_die.entity.turn" : "Mutation turns",
+  "subtitles.fight_or_die.entity.head.ambient" : "Walking Head shrieks",
+  "subtitles.fight_or_die.humanoid.death" : "Human mutation dies",
+  "subtitles.fight_or_die.stomach_growl" : "Stomach growls",
+
+  "subtitles.fight_or_die.block.hive_sounds" : "Hive block cells shatter",
+
+
+  "itemGroup.fight_or_die.item": "Fight or Die: Mutations"
+}

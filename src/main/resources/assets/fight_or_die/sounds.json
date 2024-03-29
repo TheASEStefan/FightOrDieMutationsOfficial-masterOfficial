@@ -1,0 +1,236 @@
+{
+  "block.hive_sounds": {
+    "sounds": [
+      "fight_or_die:mob/hive_step1",
+      "fight_or_die:mob/hive_step2",
+      "fight_or_die:mob/hive_step3",
+      "fight_or_die:mob/hive_step4"
+    ],
+    "subtitle": "subtitles.fight_or_die.block.hive_sounds"
+  },
+
+  "entity.malruptor.ambient": {
+    "sounds": [
+      "fight_or_die:mob/malruptor.idle"
+    ],
+    "subtitle": "subtitles.fight_or_die.entity.malruptor.ambient"
+  },
+
+  "entity.malruptor.hurt": {
+    "sounds": [
+      "fight_or_die:mob/malruptor.hurt"
+    ],
+    "subtitle": "subtitles.fight_or_die.entity.malruptor.hurt"
+  },
+
+  "entity.malruptor.death": {
+    "sounds": [
+      "fight_or_die:mob/malruptor.death"
+    ],
+    "subtitle": "subtitles.fight_or_die.entity.malruptor.death"
+  },
+
+  "entity.malruptor.infect": {
+    "sounds": [
+      "fight_or_die:mob/malruptor.infect"
+    ],
+    "subtitle": "subtitles.fight_or_die.entity.malruptor.infect"
+  },
+
+  "entity.mutated_human.ambient": {
+    "sounds": [
+      "fight_or_die:mob/assimilated_human.idle"
+    ],
+    "subtitle": "subtitles.fight_or_die.entity.assimilated_mutated.ambient"
+  },
+  "entity.mutated_player.ambient": {
+    "sounds": [
+      "fight_or_die:mob/assimilated_adventurer.idle"
+    ],
+    "subtitle": "subtitles.fight_or_die.entity.mutated_player.ambient"
+  },
+  "entity.mutated_enderman_head.ambient": {
+    "sounds": [
+      "fight_or_die:mob/assimilated_enderman_head.idle"
+    ],
+    "subtitle": "subtitles.fight_or_die.entity.mutated_enderman_head.ambient"
+  },
+  "entity.mutated_enderman.ambient": {
+    "sounds": [
+      "fight_or_die:mob/assimilated_enderman.idle"
+    ],
+    "subtitle": "subtitles.fight_or_die.entity.mutated_enderman.ambient"
+  },
+  "entity.mutated_enderman.death": {
+    "sounds": [
+      "fight_or_die:mob/assimilated_enderman.death"
+    ],
+    "subtitle": "subtitles.fight_or_die.entity.mutated_enderman.death"
+  },
+  "entity.mutated_enderman.hurt": {
+    "sounds": [
+      "fight_or_die:mob/assimilated_enderman.hurt1",
+      "fight_or_die:mob/assimilated_enderman.hurt2"
+    ],
+    "subtitle": "subtitles.fight_or_die.entity.mutated_enderman.hurt"
+  },
+  "entity.mutated_cow.ambient": {
+    "sounds": [
+      "fight_or_die:mob/assimilated_cow.idle"
+    ],
+    "subtitle": "subtitles.fight_or_die.entity.mutated_cow.ambient"
+  },
+  "entity.mutated_sheep.ambient": {
+    "sounds": [
+      "fight_or_die:mob/assimilated_sheep.idle"
+    ],
+    "subtitle": "subtitles.fight_or_die.entity.mutated_sheep.ambient"
+  },
+
+  "entity.mutated_pig.ambient": {
+    "sounds": [
+      "fight_or_die:mob/assimilated_pig.idle"
+    ],
+    "subtitle": "subtitles.fight_or_die.entity.mutated_pig.ambient"
+  },
+
+  "entity.mutated_fox.ambient": {
+    "sounds": [
+      "fight_or_die:mob/assimilated_fox.idle"
+    ],
+    "subtitle": "subtitles.fight_or_die.entity.mutated_fox.ambient"
+  },
+
+  "entity.mutated_villager.ambient": {
+    "sounds": [
+      "fight_or_die:mob/assimilated_villager.idle"
+    ],
+    "subtitle": "subtitles.fight_or_die.entity.mutated_villager.ambient"
+  },
+
+  "entity.mutated.hurt": {
+    "sounds": [
+      "fight_or_die:mob/assimilated.hurt"
+    ],
+    "subtitle": "subtitles.fight_or_die.entity.mutated.hurt"
+  },
+
+  "entity.explosion": {
+    "sounds": [
+      "fight_or_die:mob/explosion"
+    ],
+    "subtitle": "subtitles.fight_or_die.entity.explosion"
+  },
+
+  "entity.turn": {
+    "sounds": [
+      "fight_or_die:mob/turn"
+    ],
+    "subtitle": "subtitles.fight_or_die.entity.turn"
+  },
+
+  "stomach_growl": {
+    "sounds": [
+      "fight_or_die:mob/stomach_growl"
+    ],
+    "subtitle": "subtitles.fight_or_die.stomach_growl"
+  },
+
+  "entity.head.ambient": {
+    "sounds": [
+      "fight_or_die:mob/head.idle"
+    ],
+    "subtitle": "subtitles.fight_or_die.entity.head.ambient"
+  },
+
+  "humanoid.death": {
+    "sounds": [
+      "fight_or_die:mob/humanoid.death"
+    ],
+    "subtitle": "subtitles.fight_or_die.humanoid.death"
+  },
+  "mutated.animal.ambient": {
+    "sounds": [
+      "fight_or_die:mob/assimilated_animal.idle"
+    ],
+    "subtitle": "subtitles.fight_or_die.mutated.animal.ambient"
+  },
+  "entity.mutated_creeper.ambient": {
+    "sounds": [
+      "fight_or_die:mob/assimilated_creeper.idle"
+    ],
+    "subtitle": "subtitles.fight_or_die.entity.mutated_creeper.ambient"
+  },
+
+  "entity.mutated_creeper.death": {
+    "sounds": [
+      "fight_or_die:mob/assimilated_creeper.death"
+    ],
+    "subtitle": "subtitles.fight_or_die.entity.mutated_creeper.death"
+  },
+
+  "player_phase0": {
+    "sounds": [
+      "fight_or_die:mob/phase0"
+    ],
+    "subtitle": "subtitles.fight_or_die.player_phase0"
+  },
+
+  "player_phase1": {
+    "sounds": [
+      "fight_or_die:mob/phase1"
+    ],
+    "subtitle": "subtitles.fight_or_die.player_phase1"
+  },
+
+  "player_phase2": {
+    "sounds": [
+      "fight_or_die:mob/phase2"
+    ],
+    "subtitle": "subtitles.fight_or_die.player_phase2"
+  },
+
+  "player_phase3": {
+    "sounds": [
+      "fight_or_die:mob/phase3"
+    ],
+    "subtitle": "subtitles.fight_or_die.player_phase3"
+  },
+
+  "player_phase4": {
+    "sounds": [
+      "fight_or_die:mob/phase4"
+    ],
+    "subtitle": "subtitles.fight_or_die.player_phase4"
+  },
+
+  "player_phase5": {
+    "sounds": [
+      "fight_or_die:mob/phase5"
+    ],
+    "subtitle": "subtitles.fight_or_die.player_phase5"
+  },
+
+  "jumpscare_1": {
+    "sounds": [
+      "fight_or_die:mob/jumpscare1"
+    ],
+    "subtitle": "subtitles.fight_or_die.jumpscare_1"
+  },
+
+  "jumpscare_2": {
+    "sounds": [
+      "fight_or_die:mob/jumpscare2"
+    ],
+    "subtitle": "subtitles.fight_or_die.jumpscare_2"
+  },
+
+  "jumpscare_3": {
+    "sounds": [
+      "fight_or_die:mob/jumpscare3"
+    ],
+    "subtitle": "subtitles.fight_or_die.jumpscare_3"
+  }
+
+
+}

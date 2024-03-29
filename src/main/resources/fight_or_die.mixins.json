@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "net.teamabyssalofficial.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "refmap": "fight_or_die.refmap.json",
+  "mixins": [
+    "LivingEntityMixin",
+    "PlayerMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
