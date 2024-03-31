@@ -7,6 +7,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.teamabyssalofficial.fight_or_die.FightOrDieMutations;
 import net.teamabyssalofficial.particles.BloodPuffParticle;
+import net.teamabyssalofficial.particles.GutsParticle;
 import net.teamabyssalofficial.particles.KillCountParticle;
 import net.teamabyssalofficial.particles.PoisonPuffParticle;
 import net.teamabyssalofficial.registry.ParticleRegistry;
@@ -24,5 +25,8 @@ public class ParticleRegisteringEvent {
 
         Minecraft.getInstance().particleEngine.register(ParticleRegistry.KILL_COUNT.get(),
                 KillCountParticle.Provider::new);
+
+        Minecraft.getInstance().particleEngine.register(ParticleRegistry.GUTS.get(),
+                GutsParticle.Provider::new);
     }
 }

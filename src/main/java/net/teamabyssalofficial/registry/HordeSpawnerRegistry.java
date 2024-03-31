@@ -42,7 +42,7 @@ public class HordeSpawnerRegistry {
             if (this.nextTick > 0) {
                 return 0;
             } else {
-                this.nextTick += FightOrDieMutationsConfig.SERVER.ticksBeforeHordeSpawning.get() +  FightOrDieMutationsConfig.SERVER.additionalRandomizedTicks.get();
+                this.nextTick += FightOrDieMutationsConfig.SERVER.ticksBeforeHordeSpawning.get() +  FightOrDieMutationsConfig.SERVER.additionalRandomizedTicks.get() + random.nextInt(108000);
                 if (level.isNight()) {
                     if (random.nextInt(5) != 0) {
                         return 0;
@@ -79,7 +79,7 @@ public class HordeSpawnerRegistry {
                                             } else {
                                                 this.spawnHordeEntity(level, blockpos$mutableblockpos, random, false);
                                                 player.displayClientMessage(Component.literal("They're coming."), true);
-                                                player.level().playSound((Player) null, player.blockPosition(), SoundRegistry.PHASE5.get(), SoundSource.MASTER, 1.5F, 1.0F);
+                                                player.level().playSound((Player) null, player.blockPosition(), SoundRegistry.HORDE_SPAWNED.get(), SoundSource.MASTER, 1.2F, 1.0F);
                                             }
 
                                             blockpos$mutableblockpos.setX(blockpos$mutableblockpos.getX() + random.nextInt(5) - random.nextInt(5));

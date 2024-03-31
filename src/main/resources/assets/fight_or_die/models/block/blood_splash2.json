@@ -1,0 +1,22 @@
+{
+	"credit": "Hecho por RenovatedStudios",
+	"parent": "block/block",
+	"texture_size": [32, 32],
+	"render_type": "cutout",
+	"textures": {
+		"particle": "fight_or_die:block/blood_splash2",
+		"base": "fight_or_die:block/blood_splash2"
+	},
+	"elements": [
+		{
+			"name": "blood_splash_base",
+			"from": [1, 0.1, 1],
+			"to": [15, 0.1, 15],
+			"shade": false,
+			"faces": {
+				"up": {"uv": [1, 1, 15, 15], "rotation": 180, "texture": "#base"},
+				"down": {"uv": [1, 1, 15, 15], "rotation": 180, "texture": "#base"}
+			}
+		}
+	]
+}

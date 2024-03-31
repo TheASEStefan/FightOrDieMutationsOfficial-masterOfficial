@@ -315,6 +315,10 @@ public class AssimilatedEndermanEntity extends AdvancedMutated implements GeoEnt
         return SoundRegistry.ENTITY_ASSIMILATED_ENDERMAN_DEATH.get();
     }
 
+    public int getSubtractionPoints() {
+        return 50;
+    }
+
     @Override
     public void die(DamageSource source) {
         if (this.level() instanceof ServerLevel world) {
@@ -322,7 +326,7 @@ public class AssimilatedEndermanEntity extends AdvancedMutated implements GeoEnt
             int currentScore = worldDataRegistry.getScore();
             int currentPhase = worldDataRegistry.getPhase();
             if (currentPhase > 2) {
-                worldDataRegistry.setScore(currentScore - 25);
+                worldDataRegistry.setScore(currentScore - this.getSubtractionPoints());
             }
         }
 

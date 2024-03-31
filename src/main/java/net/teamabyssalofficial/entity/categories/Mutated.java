@@ -143,6 +143,10 @@ public class Mutated extends Monster {
 
     }
 
+    public int getSubtractionPoints() {
+        return 5;
+    }
+
 
     @Override
     public void die(DamageSource source) {
@@ -150,8 +154,8 @@ public class Mutated extends Monster {
             WorldDataRegistry worldDataRegistry = WorldDataRegistry.getWorldDataRegistry(world);
             int currentScore = worldDataRegistry.getScore();
             int currentPhase = worldDataRegistry.getPhase();
-            if (Math.random() <= 0.85F && currentPhase > 2) {
-                worldDataRegistry.setScore(currentScore - 5);
+            if (currentPhase > 2) {
+                worldDataRegistry.setScore(currentScore - this.getSubtractionPoints());
             }
         }
         super.die(source);

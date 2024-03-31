@@ -86,6 +86,7 @@ public class MutatedEnderPearl extends BaseItem implements Utility, Drop {
     public InteractionResultHolder<ItemStack> use(Level pLevel, Player pPlayer, InteractionHand pUsedHand) {
             AABB boundingBox = pPlayer.getBoundingBox().inflate(20);
             List<Entity> entities = pLevel.getEntities(pPlayer, boundingBox);
+            pPlayer.getCooldowns().addCooldown(this, 20);
             for (Entity entity : entities) {
                 if (entity instanceof LivingEntity livingEntity && EntityRegistry.PARASITES.contains(entity)) {
                     this.randTeleport(pLevel, livingEntity);

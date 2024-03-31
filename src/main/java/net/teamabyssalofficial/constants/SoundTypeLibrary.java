@@ -1,5 +1,6 @@
 package net.teamabyssalofficial.constants;
 
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.Mth;
 import net.minecraft.world.level.block.SoundType;
 import net.teamabyssalofficial.registry.SoundRegistry;
@@ -24,6 +25,8 @@ public class SoundTypeLibrary {
     private static final float volume = 1.0F;
     private static final float pitch = 1.05F;
     private float lerpingSound = Mth.lerp(volume * pitch, volume + 0, volume + Mth.PI * 2);
+
+    public static final SoundType EMPTY = new SoundType(volume, pitch, SoundEvents.EMPTY, SoundEvents.EMPTY, SoundEvents.EMPTY, SoundEvents.EMPTY, SoundEvents.EMPTY);
     public static final SoundType HIVE_SOUNDS = new SoundType(volume, pitch - 0.10F, SoundRegistry.HIVE_SOUNDS.get(), SoundRegistry.HIVE_SOUNDS.get(), SoundRegistry.HIVE_SOUNDS.get(), SoundRegistry.HIVE_SOUNDS.get(), SoundRegistry.HIVE_SOUNDS.get());
 
 

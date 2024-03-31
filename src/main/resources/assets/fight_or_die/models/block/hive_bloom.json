@@ -1,0 +1,67 @@
+{
+	"credit": "Hecho por RenovatedStudios",
+	"parent": "block/block",
+	"texture_size": [32, 32],
+	"render_type": "cutout",
+	"textures": {
+		"particle": "fight_or_die:block/hive_bloom",
+		"flower": "fight_or_die:block/hive_bloom",
+		"base": "fight_or_die:block/blood_splash2"
+	},
+	"elements": [
+		{
+			"name": "blood_splash_base",
+			"from": [-2, 0.1, -2],
+			"to": [18, 0.1, 18],
+			"shade": false,
+			"faces": {
+				"up": {"uv": [1, 1, 15, 15], "rotation": 180, "texture": "#base"},
+				"down": {"uv": [1, 1, 15, 15], "rotation": 180, "texture": "#base"}
+			}
+		},
+		{
+			"name": "leaf1",
+			"from": [8, 0.2, 0],
+			"to": [24, 0.2, 16],
+			"shade": false,
+			"rotation": {"angle": 22.5, "axis": "z", "origin": [8, 0.5, 0]},
+			"faces": {
+				"up": {"uv": [0, 0, 16, 16], "rotation": 90, "texture": "#flower"},
+				"down": {"uv": [0, 16, 16, 0], "rotation": 270, "texture": "#flower"}
+			}
+		},
+		{
+			"name": "leaf2",
+			"from": [-8, 0.2, 0],
+			"to": [8, 0.2, 16],
+			"shade": false,
+			"rotation": {"angle": -22.5, "axis": "z", "origin": [8, 0.5, 0]},
+			"faces": {
+				"up": {"uv": [0, 0, 16, 16], "rotation": 270, "texture": "#flower"},
+				"down": {"uv": [0, 16, 16, 0], "rotation": 90, "texture": "#flower"}
+			}
+		},
+		{
+			"name": "leaf3",
+			"from": [0, 0.2, 8],
+			"to": [16, 0.2, 24],
+			"shade": false,
+			"rotation": {"angle": -22.5, "axis": "x", "origin": [0, 0.5, 8]},
+			"faces": {
+				"up": {"uv": [16, 16, 0, 0], "texture": "#flower"},
+				"down": {"uv": [16, 0, 0, 16], "texture": "#flower"}
+			}
+		},
+		{
+			"name": "leaf4",
+			"from": [0, 0.2, -8],
+			"to": [16, 0.2, 8],
+			"shade": false,
+			"rotation": {"angle": 22.5, "axis": "x", "origin": [0, 0.5, 8]},
+			"faces": {
+				"up": {"uv": [0, 0, 16, 16], "texture": "#flower"},
+				"down": {"uv": [0, 16, 16, 0], "texture": "#flower"}
+			}
+		}
+	]
+}

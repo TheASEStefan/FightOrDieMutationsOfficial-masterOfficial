@@ -171,7 +171,7 @@ public class AssimilatedCreeperEntity extends AdvancedMutated implements GeoEnti
             if (flag1 || flag2) {
                 if (world instanceof ServerLevel world1) {
                     WorldDataRegistry worldDataRegistry = WorldDataRegistry.getWorldDataRegistry(world1);
-                    worldDataRegistry.setScore(worldDataRegistry.getScore() + 20);
+                    worldDataRegistry.setScore(worldDataRegistry.getScore() + this.getSubtractionPoints());
                 }
             }
         }
@@ -228,8 +228,19 @@ public class AssimilatedCreeperEntity extends AdvancedMutated implements GeoEnti
         return cache;
     }
 
+    public int getSubtractionPoints() {
+        return 25;
+    }
     @Override
     public void die(DamageSource source) {
+        if (this.level() instanceof ServerLevel world) {
+            WorldDataRegistry worldDataRegistry = WorldDataRegistry.getWorldDataRegistry(world);
+            int currentScore = worldDataRegistry.getScore();
+            int currentPhase = worldDataRegistry.getPhase();
+            if (currentPhase > 2) {
+                worldDataRegistry.setScore(currentScore - this.getSubtractionPoints());
+            }
+        }
         if (Math.random() <= 0.75F) {
             if (this.getTarget() != null) {
                 Entity attackTarget = this.getTarget();

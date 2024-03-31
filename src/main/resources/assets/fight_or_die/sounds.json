@@ -230,7 +230,12 @@
       "fight_or_die:mob/jumpscare3"
     ],
     "subtitle": "subtitles.fight_or_die.jumpscare_3"
+  },
+
+  "horde_spawned": {
+    "sounds": [
+      "fight_or_die:mob/horde_spawned"
+    ],
+    "subtitle": "subtitles.fight_or_die.horde_spawned"
   }
-
-
 }

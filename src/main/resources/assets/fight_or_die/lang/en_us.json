@@ -61,6 +61,10 @@
 
   "block.fight_or_die.hive_block": "Hive Block",
   "block.fight_or_die.hive_tunnel_block": "Hive Tunnel",
+  "block.fight_or_die.hive_bloom": "Hive Bloom",
+
+  "block.fight_or_die.blood_splash1": "Medium Blood Splash",
+  "block.fight_or_die.blood_splash2": "Large Blood Splash",
 
   "entity.fight_or_die.shiller": "Shiller",
   "entity.fight_or_die.springer": "Springer",
@@ -92,6 +96,8 @@
   "subtitles.fight_or_die.player_phase3": "What was that?...",
   "subtitles.fight_or_die.player_phase4": "I'm starting to get scared, I'm being counted down...",
   "subtitles.fight_or_die.player_phase5": "...",
+
+  "subtitles.fight_or_die.horde_spawned": "The Horde is approaching...",
 
   "subtitles.fight_or_die.jumpscare_1": "What was that?",
   "subtitles.fight_or_die.jumpscare_2": "I'm getting scared!",

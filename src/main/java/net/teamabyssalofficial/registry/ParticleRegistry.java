@@ -18,6 +18,8 @@ public class ParticleRegistry {
             PARTICLE_TYPES.register("blood_puff", () -> new SimpleParticleType(true));
     public static final RegistryObject<SimpleParticleType> KILL_COUNT =
             PARTICLE_TYPES.register("kill_count", () -> new SimpleParticleType(true));
+    public static final RegistryObject<SimpleParticleType> GUTS =
+            PARTICLE_TYPES.register("guts", () -> new SimpleParticleType(true));
 
     public static void register(IEventBus eventBus) {
         PARTICLE_TYPES.register(eventBus);

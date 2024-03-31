@@ -1,6 +1,7 @@
 package net.teamabyssalofficial.entity.custom;
 
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvent;
@@ -25,16 +26,14 @@ import net.minecraft.world.entity.monster.*;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.ServerLevelAccessor;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.AABB;
 import net.teamabyssalofficial.config.FightOrDieMutationsConfig;
 import net.teamabyssalofficial.entity.ai.CustomMeleeAttackGoal;
 import net.teamabyssalofficial.entity.categories.Mutated;
 import net.teamabyssalofficial.extra.ScreenShakeEntity;
-import net.teamabyssalofficial.registry.EffectRegistry;
-import net.teamabyssalofficial.registry.EntityRegistry;
-import net.teamabyssalofficial.registry.ParticleRegistry;
-import net.teamabyssalofficial.registry.SoundRegistry;
+import net.teamabyssalofficial.registry.*;
 import org.jetbrains.annotations.Nullable;
 import software.bernie.geckolib.animatable.GeoEntity;
 import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache;
@@ -197,6 +196,33 @@ public class AssimilatedHumanEntity extends Mutated implements GeoEntity {
                             this.spawnLingeringCloud();
                             if (this.level() instanceof ServerLevel server) {
                                 server.sendParticles(ParticleRegistry.POISON_PUFF.get(), this.getX(), this.getY() + 1, this.getZ(), 65, 0.2, 0.8, 0.4, 0.15);
+                                server.sendParticles(ParticleRegistry.GUTS.get(), this.getRandomX(0.5D), this.getRandomY() + 0.35D, this.getRandomZ(0.65D), 15, 0.1, 0.2, 0.1, -(this.random.nextDouble() - 0.5D) * 0.05D);
+                            }
+
+                            AABB aabb = this.getBoundingBox().inflate(1);
+                            for(BlockPos blockpos : BlockPos.betweenClosed(Mth.floor(aabb.minX), Mth.floor(aabb.minY), Mth.floor(aabb.minZ), Mth.floor(aabb.maxX), Mth.floor(aabb.maxY), Mth.floor(aabb.maxZ))) {
+                                BlockState blockState = level().getBlockState(blockpos);
+                                BlockState above = level().getBlockState(blockpos.above());
+                                BlockState east = level().getBlockState(blockpos.east());
+                                BlockState west = level().getBlockState(blockpos.west());
+                                if (!level().isClientSide() && blockState.isSolidRender(level(),blockpos) && above.isAir()){
+                                    if (Math.random() < 0.9){
+                                        if (Math.random() < 0.25) {
+                                            level().setBlock(blockpos.above(), BlockRegistry.BLOOD_SPLASH2.get().defaultBlockState(), 3);
+                                            if (Math.random() <= 0.25 && west.isAir())
+                                                level().setBlock(blockpos.west(), BlockRegistry.BLOOD_SPLASH2.get().defaultBlockState(), 3);
+                                            if (Math.random() <= 0.35 && east.isAir())
+                                                level().setBlock(blockpos.east(), BlockRegistry.BLOOD_SPLASH2.get().defaultBlockState(), 3);
+
+                                        } else if (Math.random() < 0.15) {
+                                            level().setBlock(blockpos.above(), BlockRegistry.BLOOD_SPLASH1.get().defaultBlockState(), 3);
+                                            if (Math.random() <= 0.25 && east.isAir())
+                                                level().setBlock(blockpos.east(), BlockRegistry.BLOOD_SPLASH1.get().defaultBlockState(), 3);
+                                            if (Math.random() <= 0.35 && west.isAir())
+                                                level().setBlock(blockpos.west(), BlockRegistry.BLOOD_SPLASH1.get().defaultBlockState(), 3);
+                                        }
+                                    }
+                                }
                             }
                         }
                     }
@@ -218,6 +244,34 @@ public class AssimilatedHumanEntity extends Mutated implements GeoEntity {
                         this.spawnLingeringCloud();
                         if (this.level() instanceof ServerLevel server) {
                             server.sendParticles(ParticleRegistry.POISON_PUFF.get(), this.getX(), this.getY() + 1, this.getZ(), 65, 0.2, 0.8, 0.4, 0.15);
+                            server.sendParticles(ParticleRegistry.GUTS.get(), this.getRandomX(0.5D), this.getRandomY() + 0.35D, this.getRandomZ(0.65D), 15, 0.1, 0.2, 0.1, -(this.random.nextDouble() - 0.5D) * 0.05D);
+                        }
+
+
+                        AABB aabb = this.getBoundingBox().inflate(1);
+                        for(BlockPos blockpos : BlockPos.betweenClosed(Mth.floor(aabb.minX), Mth.floor(aabb.minY), Mth.floor(aabb.minZ), Mth.floor(aabb.maxX), Mth.floor(aabb.maxY), Mth.floor(aabb.maxZ))) {
+                            BlockState blockState = level().getBlockState(blockpos);
+                            BlockState above = level().getBlockState(blockpos.above());
+                            BlockState east = level().getBlockState(blockpos.east());
+                            BlockState west = level().getBlockState(blockpos.west());
+                            if (!level().isClientSide() && blockState.isSolidRender(level(),blockpos) && above.isAir()){
+                                if (Math.random() < 0.9) {
+                                    if (Math.random() < 0.25) {
+                                        level().setBlock(blockpos.above(), BlockRegistry.BLOOD_SPLASH2.get().defaultBlockState(), 3);
+                                        if (Math.random() <= 0.25 && west.isAir())
+                                            level().setBlock(blockpos.west(), BlockRegistry.BLOOD_SPLASH2.get().defaultBlockState(), 3);
+                                        if (Math.random() <= 0.35 && east.isAir())
+                                            level().setBlock(blockpos.east(), BlockRegistry.BLOOD_SPLASH2.get().defaultBlockState(), 3);
+
+                                    } else if (Math.random() < 0.15) {
+                                        level().setBlock(blockpos.above(), BlockRegistry.BLOOD_SPLASH1.get().defaultBlockState(), 3);
+                                        if (Math.random() <= 0.25 && east.isAir())
+                                            level().setBlock(blockpos.east(), BlockRegistry.BLOOD_SPLASH1.get().defaultBlockState(), 3);
+                                        if (Math.random() <= 0.35 && west.isAir())
+                                            level().setBlock(blockpos.west(), BlockRegistry.BLOOD_SPLASH1.get().defaultBlockState(), 3);
+                                    }
+                                }
+                            }
                         }
                     }
                 }

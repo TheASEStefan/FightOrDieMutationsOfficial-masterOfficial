@@ -23,6 +23,7 @@ public class SoundRegistry {
     }
 
     public static final RegistryObject<SoundEvent> HIVE_SOUNDS  = soundRegistry("block.hive_sounds");
+    public static final RegistryObject<SoundEvent> HORDE_SPAWNED  = soundRegistry("horde_spawned");
     public static final RegistryObject<SoundEvent> ENTITY_MALRUPTOR_AMBIENT  = soundRegistry("entity.malruptor.ambient");
     public static final RegistryObject<SoundEvent> ENTITY_MALRUPTOR_HURT  = soundRegistry("entity.malruptor.hurt");
     public static final RegistryObject<SoundEvent> ENTITY_MALRUPTOR_DEATH = soundRegistry("entity.malruptor.death");

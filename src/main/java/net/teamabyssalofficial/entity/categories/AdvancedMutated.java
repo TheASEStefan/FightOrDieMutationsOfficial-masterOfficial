@@ -146,16 +146,4 @@ public class AdvancedMutated extends Monster {
 
     }
 
-    @Override
-    public void die(DamageSource source) {
-        if (this.level() instanceof ServerLevel world) {
-            WorldDataRegistry worldDataRegistry = WorldDataRegistry.getWorldDataRegistry(world);
-            int currentScore = worldDataRegistry.getScore();
-            int currentPhase = worldDataRegistry.getPhase();
-            if (currentPhase > 2) {
-                worldDataRegistry.setScore(currentScore - 25);
-            }
-        }
-        super.die(source);
-    }
 }

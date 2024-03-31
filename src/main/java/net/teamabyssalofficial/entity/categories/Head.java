@@ -81,6 +81,10 @@ public class Head extends Monster {
 
     }
 
+    public int getSubtractionPoints() {
+        return 1;
+    }
+
     @Override
     public void die(DamageSource source) {
         this.level().addParticle(DustParticleOptions.REDSTONE, this.getX(), this.getY() + 0.8, this.getZ(), 0.0D, 0.0D, 0.0D);
@@ -91,8 +95,8 @@ public class Head extends Monster {
             WorldDataRegistry worldDataRegistry = WorldDataRegistry.getWorldDataRegistry(world);
             int currentScore = worldDataRegistry.getScore();
             int currentPhase = worldDataRegistry.getPhase();
-            if (Math.random() <= 0.85F && currentPhase > 2) {
-                worldDataRegistry.setScore(currentScore - 1);
+            if (currentPhase > 2) {
+                worldDataRegistry.setScore(currentScore - this.getSubtractionPoints());
             }
         }
 

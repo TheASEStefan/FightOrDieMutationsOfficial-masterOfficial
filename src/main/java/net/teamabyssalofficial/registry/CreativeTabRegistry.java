@@ -58,6 +58,10 @@ public class CreativeTabRegistry {
 
         entries.accept(BlockRegistry.HIVE_BLOCK.get());
         entries.accept(BlockRegistry.HIVE_TUNNEL_BLOCK.get());
+        entries.accept(BlockRegistry.HIVE_BLOOM.get());
+
+        entries.accept(BlockRegistry.BLOOD_SPLASH1.get());
+        entries.accept(BlockRegistry.BLOOD_SPLASH2.get());
 
     }).build());
 

@@ -189,8 +189,8 @@ public class FightOrDieMutationsConfig {
             builder.push("Horde");
             this.enable_horde = builder.comment("Default true").define("Should mutation hordes spawn?",true);
             this.mobSpawnAttempts = builder.comment("Default 30").define("Approximate Number of Mobs Spawning",30);
-            this.ticksBeforeHordeSpawning= builder.comment("Default 36000").define("Ticks before the horde spawning",36000);
-            this.additionalRandomizedTicks = builder.comment("Default 1200").define("Additional ticks",1200);
+            this.ticksBeforeHordeSpawning= builder.comment("Default 36000").define("Ticks before the horde spawning (not including the random ticks based on chance which add do the horde spawning time)",36000);
+            this.additionalRandomizedTicks = builder.comment("Default 1200").define("Additional horde ticks",1200);
             builder.pop();
 
 

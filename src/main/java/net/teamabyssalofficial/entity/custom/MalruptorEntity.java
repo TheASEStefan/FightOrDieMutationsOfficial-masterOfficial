@@ -236,14 +236,18 @@ public class MalruptorEntity extends Infector implements GeoEntity, Evolved, Hun
         return SoundRegistry.ENTITY_MALRUPTOR_AMBIENT.get();
     }
 
+
+    public int getSubtractionPoints() {
+        return 2;
+    }
     @Override
     public void die(DamageSource source) {
         if (this.level() instanceof ServerLevel world) {
             WorldDataRegistry worldDataRegistry = WorldDataRegistry.getWorldDataRegistry(world);
             int currentScore = worldDataRegistry.getScore();
             int currentPhase = worldDataRegistry.getPhase();
-            if (Math.random() <= 0.85F && currentPhase > 2) {
-                worldDataRegistry.setScore(currentScore - 2);
+            if (currentPhase > 2) {
+                worldDataRegistry.setScore(currentScore - this.getSubtractionPoints());
             }
         }
         super.die(source);
