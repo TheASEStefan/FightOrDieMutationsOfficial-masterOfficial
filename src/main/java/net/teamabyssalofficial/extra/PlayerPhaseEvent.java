@@ -24,53 +24,60 @@ public class PlayerPhaseEvent {
     }
 
 
-
-
     @SubscribeEvent
     public static void PointIncrementEvent(TickEvent.LevelTickEvent event) {
         if(event.phase == TickEvent.Phase.END && event.level instanceof ServerLevel world) {
             WorldDataRegistry worldDataRegistry = WorldDataRegistry.getWorldDataRegistry(world);
             int currentPhase = worldDataRegistry.getPhase();
             int currentScore = worldDataRegistry.getScore();
+            int main_score = 5;
             if (event.level.getDifficulty() == Difficulty.NORMAL) {
                 if (Math.random() < 0.02F) {
-                    if (currentPhase < 2) {
-                        worldDataRegistry.setScore(currentScore + 2);
-                    }
-                    else if (currentPhase > 2) {
-                        worldDataRegistry.setScore(currentScore - 1);
-                    }
-                }
-                if (Math.random() < 0.015F) {
-                    if (currentScore > 0) {
-                        worldDataRegistry.setScore(currentScore + 5);
+                    switch (currentPhase) {
+                        case 0 -> main_score = 1;
+                        case 1 -> main_score = 2;
+                        case 2 -> main_score = 4;
+                        case 3 -> main_score = 7;
+                        case 4 -> main_score = 9;
+                        case 5 -> main_score = 22;
                     }
                 }
-                if (Math.random() < 0.015F) {
-                    if (currentPhase > 3) {
-                        worldDataRegistry.setScore(currentScore + 3);
+                else if (Math.random() < 0.01F) {
+                    switch (currentPhase) {
+                        case 0 -> main_score = 1;
+                        case 1 -> main_score = 3;
+                        case 2 -> main_score = 5;
+                        case 3 -> main_score = 7;
+                        case 4 -> main_score = 14;
+                        case 5 -> main_score = 27;
                     }
                 }
             }
             else if (event.level.getDifficulty() == Difficulty.HARD) {
                 if (Math.random() < 0.02F) {
-                    if (currentPhase < 2) {
-                        worldDataRegistry.setScore(currentScore + 3);
-                    }
-                    else if (currentPhase > 2) {
-                        worldDataRegistry.setScore(currentScore - 1);
-                    }
-                }
-                if (Math.random() < 0.025F) {
-                    if (currentScore > 0) {
-                        worldDataRegistry.setScore(currentScore + 10);
+                    switch (currentPhase) {
+                        case 0 -> main_score = 2;
+                        case 1 -> main_score = 4;
+                        case 2 -> main_score = 7;
+                        case 3 -> main_score = 10;
+                        case 4 -> main_score = 15;
+                        case 5 -> main_score = 28;
                     }
                 }
-                if (Math.random() < 0.025F) {
-                    if (currentPhase > 3) {
-                        worldDataRegistry.setScore(currentScore + 5);
+                else if (Math.random() < 0.01F) {
+                    switch (currentPhase) {
+                        case 0 -> main_score = 2;
+                        case 1 -> main_score = 5;
+                        case 2 -> main_score = 8;
+                        case 3 -> main_score = 12;
+                        case 4 -> main_score = 21;
+                        case 5 -> main_score = 45;
                     }
                 }
+            }
+
+            if (Math.random() <= 0.0099F) {
+                worldDataRegistry.setScore(currentScore + main_score);
             }
         }
     }
@@ -80,30 +87,31 @@ public class PlayerPhaseEvent {
             WorldDataRegistry worldDataRegistry = WorldDataRegistry.getWorldDataRegistry((ServerLevel) player.level());
             int currentPhase = worldDataRegistry.getPhase();
             int currentScore = worldDataRegistry.getScore();
-            if (currentPhase == 0) {
-                worldDataRegistry.setScore(currentScore + 5);
-                worldDataRegistry.setDirty();
-            }
-            else if (currentPhase == 1) {
-                worldDataRegistry.setScore(currentScore + 10);
-                worldDataRegistry.setDirty();
-            }
-            else if (currentPhase == 2) {
-                worldDataRegistry.setScore(currentScore + 20);
-                worldDataRegistry.setDirty();
-            }
-            else if (currentPhase == 3) {
-                worldDataRegistry.setScore(currentScore + 40);
-                worldDataRegistry.setDirty();
-            }
-            else if (currentPhase == 4) {
-                worldDataRegistry.setScore(currentScore + 80);
-                worldDataRegistry.setDirty();
-            }
-            else if (currentPhase == 5) {
-                worldDataRegistry.setScore(currentScore + 160);
-                worldDataRegistry.setDirty();
-
+            switch (currentPhase) {
+                case 0 -> {
+                    worldDataRegistry.setScore(currentScore + 5);
+                    worldDataRegistry.setDirty();
+                }
+                case 1 -> {
+                    worldDataRegistry.setScore(currentScore + 10);
+                    worldDataRegistry.setDirty();
+                }
+                case 2 -> {
+                    worldDataRegistry.setScore(currentScore + 20);
+                    worldDataRegistry.setDirty();
+                }
+                case 3 -> {
+                    worldDataRegistry.setScore(currentScore + 40);
+                    worldDataRegistry.setDirty();
+                }
+                case 4 -> {
+                    worldDataRegistry.setScore(currentScore + 80);
+                    worldDataRegistry.setDirty();
+                }
+                case 5 -> {
+                    worldDataRegistry.setScore(currentScore + 160);
+                    worldDataRegistry.setDirty();
+                }
             }
         }
     }

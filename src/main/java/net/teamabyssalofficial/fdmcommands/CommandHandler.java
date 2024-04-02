@@ -12,5 +12,7 @@ public class CommandHandler {
         PointCommand.register(event.getDispatcher());
         PhaseCommand.register(event.getDispatcher());
         SpawnHordeCommand.register(event.getDispatcher());
+        ShowScoreCommand.register(event.getDispatcher());
+        ShowPhaseCommand.register(event.getDispatcher());
     }
 }

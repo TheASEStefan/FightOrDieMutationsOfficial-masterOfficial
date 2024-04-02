@@ -2,6 +2,7 @@ package net.teamabyssalofficial.fight_or_die;
 
 import com.mojang.logging.LogUtils;
 import com.mojang.serialization.Codec;
+import net.minecraft.client.particle.SmokeParticle;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.world.BiomeModifier;
@@ -80,6 +81,7 @@ public class FightOrDieMutations {
 
     }
 
+
     @Mod.EventBusSubscriber(modid = MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
     public static class ClientModEvents {
         @SubscribeEvent
@@ -87,19 +89,23 @@ public class FightOrDieMutations {
             IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
             MinecraftForge.EVENT_BUS.register(new CameraShake());
             EntityRenderers.register(EntityRegistry.SCREEN_SHAKE.get(), RendererNull::new);
+
             EntityRenderers.register(EntityRegistry.SHILLER.get(), ShillerRenderer::new);
             EntityRenderers.register(EntityRegistry.MALRUPTOR.get(), MalruptorRenderer::new);
-            EntityRenderers.register(EntityRegistry.ASSIMILATED_HUMAN.get(), AssimilatedHumanRenderer::new);
-            EntityRenderers.register(EntityRegistry.ASSIMILATED_VILLAGER.get(), AssimilatedVillagerRenderer::new);
+
+            EntityRenderers.register(EntityRegistry.ASSIMILATED_COW_HEAD.get(), AssimilatedCowHeadRenderer::new);
             EntityRenderers.register(EntityRegistry.ASSIMILATED_HUMAN_HEAD.get(), AssimilatedHumanHeadRenderer::new);
             EntityRenderers.register(EntityRegistry.ASSIMILATED_VILLAGER_HEAD.get(), AssimilatedVillagerHeadRenderer::new);
             EntityRenderers.register(EntityRegistry.ASSIMILATED_ADVENTURER_HEAD.get(), AssimilatedAdventurerHeadRenderer::new);
             EntityRenderers.register(EntityRegistry.ASSIMILATED_ENDERMAN_HEAD.get(), AssimilatedEndermanHeadRenderer::new);
             EntityRenderers.register(EntityRegistry.ASSIMILATED_CREEPER_HEAD.get(), AssimilatedCreeperHeadRenderer::new);
+
             EntityRenderers.register(EntityRegistry.ASSIMILATED_COW.get(), AssimilatedCowRenderer::new);
             EntityRenderers.register(EntityRegistry.ASSIMILATED_SHEEP.get(), AssimilatedSheepRenderer::new);
             EntityRenderers.register(EntityRegistry.ASSIMILATED_PIG.get(), AssimilatedPigRenderer::new);
             EntityRenderers.register(EntityRegistry.ASSIMILATED_FOX.get(), AssimilatedFoxRenderer::new);
+            EntityRenderers.register(EntityRegistry.ASSIMILATED_HUMAN.get(), AssimilatedHumanRenderer::new);
+            EntityRenderers.register(EntityRegistry.ASSIMILATED_VILLAGER.get(), AssimilatedVillagerRenderer::new);
             EntityRenderers.register(EntityRegistry.ASSIMILATED_CREEPER.get(), AssimilatedCreeperRenderer::new);
             EntityRenderers.register(EntityRegistry.ASSIMILATED_ENDERMAN.get(), AssimilatedEndermanRenderer::new);
 

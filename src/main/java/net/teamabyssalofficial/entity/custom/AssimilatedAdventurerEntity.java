@@ -215,6 +215,7 @@ public class AssimilatedAdventurerEntity extends Mutated {
     }
 
 
+
     public void aiStep() {
 
         super.aiStep();

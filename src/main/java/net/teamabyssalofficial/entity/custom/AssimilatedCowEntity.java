@@ -112,12 +112,10 @@ public class AssimilatedCowEntity extends Mutated implements GeoEntity {
 
     @Override
     public void die(DamageSource source) {
-        /* if (Math.random() <= 0.25F) {
-            //this.DropCowHead(this);
+        if (Math.random() <= 0.25F) {
+            this.DropCowHead(this);
         }
-         */
-
-        if (Math.random() <= 0.35F) {
+        else if (Math.random() <= 0.35F) {
             AABB boundingBox = this.getBoundingBox().inflate(4);
             List<Entity> entities = this.level().getEntities(this, boundingBox);
             for (Entity entity : entities) {
@@ -213,6 +211,11 @@ public class AssimilatedCowEntity extends Mutated implements GeoEntity {
         super.die(source);
     }
 
+    private void DropCowHead(Entity entity) {
+        AssimilatedCowHeadEntity assimilatedCowHeadEntity = new AssimilatedCowHeadEntity(EntityRegistry.ASSIMILATED_COW_HEAD.get(), entity.level());
+        assimilatedCowHeadEntity.moveTo(entity.getX(),entity.getY(),entity.getZ());
+        entity.level().addFreshEntity(assimilatedCowHeadEntity);
+    }
     private void ShillerExplosion(Entity entity) {
         ShillerEntity shillerEntity = new ShillerEntity(EntityRegistry.SHILLER.get(), entity.level());
         shillerEntity.moveTo(entity.getX(),entity.getY(),entity.getZ());

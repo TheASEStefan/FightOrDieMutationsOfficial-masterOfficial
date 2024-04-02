@@ -52,10 +52,12 @@ public class FightOrDieMutationsConfig {
         public final ForgeConfigSpec.ConfigValue<Double> mutated_player_health;
         public final ForgeConfigSpec.ConfigValue<Double> mutated_player_damage;
         public final ForgeConfigSpec.ConfigValue<Boolean> mutated_player_breaks_blocks;
-        public final ForgeConfigSpec.ConfigValue<Double> mutated_villager_health;
-        public final ForgeConfigSpec.ConfigValue<Double> mutated_villager_damage;
         public final ForgeConfigSpec.ConfigValue<Double> mutated_human_head_health;
         public final ForgeConfigSpec.ConfigValue<Double> mutated_human_head_damage;
+        public final ForgeConfigSpec.ConfigValue<Double> mutated_villager_health;
+        public final ForgeConfigSpec.ConfigValue<Double> mutated_villager_damage;
+        public final ForgeConfigSpec.ConfigValue<Double> mutated_cow_head_health;
+        public final ForgeConfigSpec.ConfigValue<Double> mutated_cow_head_damage;
         public final ForgeConfigSpec.ConfigValue<Double> mutated_villager_head_health;
         public final ForgeConfigSpec.ConfigValue<Double> mutated_villager_head_damage;
         public final ForgeConfigSpec.ConfigValue<Double> mutated_player_head_health;
@@ -118,6 +120,10 @@ public class FightOrDieMutationsConfig {
             this.mutated_villager_health = builder.comment("Default 22").defineInRange("Sets mutated Villager's Max health", 22, 12, Double.MAX_VALUE);
             this.mutated_villager_damage = builder.comment("Default 9").defineInRange("Sets mutated Villager's Damage", 9, 4, Double.MAX_VALUE);
             builder.pop();
+            builder.push("mutated Cow Head");
+            this.mutated_cow_head_health = builder.comment("Default 6").defineInRange("Sets mutated Cow Head's Max health", 6, 3, Double.MAX_VALUE);
+            this.mutated_cow_head_damage = builder.comment("Default 3").defineInRange("Sets mutated Cow Head's Damage", 3, 1, Double.MAX_VALUE);
+            builder.pop();
             builder.push("mutated Human Head");
             this.mutated_human_head_health = builder.comment("Default 7").defineInRange("Sets mutated Human Head's Max health", 7, 4, Double.MAX_VALUE);
             this.mutated_human_head_damage = builder.comment("Default 3").defineInRange("Sets mutated Human Head's Damage", 3, 1, Double.MAX_VALUE);
@@ -176,7 +182,7 @@ public class FightOrDieMutationsConfig {
             this.dimension_parameters = builder.comment("Default minecraft:is_overworld").defineList("Dictates in what biome the parasites spawn",
                     Lists.newArrayList("minecraft:is_overworld") , o -> o instanceof String);
             this.spawns = builder.defineList("mob|weight|minimum|maximum",
-                    Lists.newArrayList("fight_or_die:shiller|45|1|3", "fight_or_die:springer|30|1|2", "fight_or_die:mutated_human|28|1|2", "fight_or_die:mutated_player|20|1|2", "fight_or_die:mutated_villager|25|1|2", "fight_or_die:mutated_cow|25|1|2", "fight_or_die:mutated_sheep|25|1|2", "fight_or_die:mutated_pig|25|1|2", "fight_or_die:mutated_fox|22|1|2", "fight_or_die:mutated_creeper|9|1|1", "fight_or_die:mutated_enderman|5|1|1") , o -> o instanceof String);
+                    Lists.newArrayList("fight_or_die:shiller|45|1|3", "fight_or_die:springer|30|1|2", "fight_or_die:mutated_human|28|1|2", "fight_or_die:mutated_player|20|1|2", "fight_or_die:mutated_villager|25|1|2", "fight_or_die:mutated_cow|25|1|2", "fight_or_die:mutated_sheep|25|1|2", "fight_or_die:mutated_pig|25|1|2", "fight_or_die:mutated_fox|22|1|2", "fight_or_die:mutated_creeper|9|1|1", "fight_or_die:mutated_enderman|3|1|1") , o -> o instanceof String);
             builder.pop();
 
             builder.push("Targeting Tasks");
@@ -260,7 +266,8 @@ public class FightOrDieMutationsConfig {
                             "ChingChilly", "wRatte", "ivan", "PHO3N1X", "TaiwanIsTheTrueChina", "kevin",
                             "WinVic", "Wikipedia", "Mr.Lambert", "Dr.Pilot", "Harbinger", "LukeUCraft",
                             "purpleskittle", "Adrian", "Isha21", "WitherBean", "Dr.Korpus", "Dr.Simon", "Dr.Robert",
-                            "MarioThePlumber", "Lelouch VI Britannia", "Light Yagami", "Mutationcraft") , o -> o instanceof String);
+                            "MarioThePlumber", "Lelouch VI Britannia", "Light Yagami", "Mutationcraft", "yorkmousemodz",
+                            "Mattias", "entiral", "Cock Jamers", "Chad", "DopeMan", "FlipperIvy") , o -> o instanceof String);
             builder.pop();
         }
 

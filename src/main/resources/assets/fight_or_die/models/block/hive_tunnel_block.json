@@ -1,8 +1,8 @@
 {
   "parent": "minecraft:block/cube_bottom_top",
   "textures": {
-    "bottom": "fight_or_die:block/hive_block",
-    "side": "fight_or_die:block/hive_block",
+    "bottom": "fight_or_die:block/hive_tunnel_block_side",
+    "side": "fight_or_die:block/hive_tunnel_block_side",
     "top": "fight_or_die:block/hive_tunnel_block"
   }
 }

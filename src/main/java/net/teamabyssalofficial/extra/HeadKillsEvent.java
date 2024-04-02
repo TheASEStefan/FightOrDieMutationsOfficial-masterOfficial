@@ -27,7 +27,14 @@ public class HeadKillsEvent {
                     worldDataRegistry.setScore(currentScore + 10);
                 }
             }
-            if (event.getSource().getEntity() instanceof AssimilatedHumanHeadEntity) {
+            if (event.getSource().getEntity() instanceof AssimilatedCowHeadEntity) {
+                AssimilatedCowHeadEntity assimilatedCowHeadEntity = (AssimilatedCowHeadEntity) event.getSource().getEntity();
+                Level world = assimilatedCowHeadEntity.level();
+                if (!world.isClientSide && assimilatedCowHeadEntity.isAlive()) {
+                    assimilatedCowHeadEntity.setKills(assimilatedCowHeadEntity.getKills() + 1);
+                }
+            }
+            else if (event.getSource().getEntity() instanceof AssimilatedHumanHeadEntity) {
                 AssimilatedHumanHeadEntity assimilatedHumanHeadEntity = (AssimilatedHumanHeadEntity) event.getSource().getEntity();
                 Level world = assimilatedHumanHeadEntity.level();
                 if (!world.isClientSide && assimilatedHumanHeadEntity.isAlive()) {

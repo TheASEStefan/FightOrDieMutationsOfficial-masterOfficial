@@ -24,6 +24,7 @@ import net.teamabyssalofficial.registry.*;
 public class TurnClass {
 
 
+
     @SubscribeEvent
     public static void TurnEvent(LivingEvent.LivingTickEvent event) {
         if (event.getEntity() != null) {
@@ -39,9 +40,9 @@ public class TurnClass {
                 if (assimilated.IgetAssimilationProgress() > 0 && assimilated.IgetAssimilationProgress() < 100) {
                     for(int i = 0; i < 1; ++i) {
                         double offset = 0.1;
-                        double speed = 0.3;
+                        double speed = -(livingEntity.getRandom().nextDouble() - 0.5D) * 0.02D;
                         if (livingEntity.level() instanceof ServerLevel server) {
-                            server.sendParticles(ParticleRegistry.BLOOD_PUFF.get(), livingEntity.getRandomX(0.8), livingEntity.getRandomY() + 0.3, livingEntity.getRandomZ(0.8), 2, offset, offset, offset, speed);
+                            server.sendParticles(ParticleRegistry.GUTS.get(), livingEntity.getRandomX(0.5), livingEntity.getRandomY() + 0.3, livingEntity.getRandomZ(0.75), 2, offset, offset, offset, speed);
                         }
                     }
                 }

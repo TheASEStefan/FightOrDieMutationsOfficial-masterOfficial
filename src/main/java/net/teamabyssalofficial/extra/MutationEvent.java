@@ -85,7 +85,7 @@ public class MutationEvent {
                     }
                 }
             }
-            else if (entity instanceof EnderMan enderMan && enderMan.hasEffect(EffectRegistry.HIVE_SICKNESS.get()) && !world.isClientSide && FightOrDieMutationsConfig.SERVER.mutated_enderman_mutation.get() && Math.random() <= 0.75F && event.getSource().getEntity() != null && EntityRegistry.PARASITES.contains(event.getSource().getEntity()) && worldDataRegistry.getPhase() > 2) {
+            else if (entity instanceof EnderMan enderMan && enderMan.hasEffect(EffectRegistry.HIVE_SICKNESS.get()) && !world.isClientSide && FightOrDieMutationsConfig.SERVER.mutated_enderman_mutation.get() && Math.random() <= 0.65F && event.getSource().getEntity() != null && EntityRegistry.PARASITES.contains(event.getSource().getEntity()) && worldDataRegistry.getPhase() > 2) {
                 AssimilatedEndermanEntity assimilatedEndermanEntity = EntityRegistry.ASSIMILATED_ENDERMAN.get().create(world);
                 assert assimilatedEndermanEntity != null;
                 assimilatedEndermanEntity.moveTo(event.getEntity().getX(), event.getEntity().getY(), event.getEntity().getZ());

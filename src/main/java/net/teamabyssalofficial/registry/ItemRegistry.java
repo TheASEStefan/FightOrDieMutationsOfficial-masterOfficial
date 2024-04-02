@@ -33,6 +33,8 @@ public class ItemRegistry {
             () -> new ForgeSpawnEggItem(EntityRegistry.ASSIMILATED_ENDERMAN, 0x280428, 0x850d85, new Item.Properties()));
     public static final RegistryObject<Item> ASSIMILATED_ENDERMAN_HEAD_SPAWN_EGG = ITEMS.register("mutated_enderman_head_spawn_egg",
             () -> new ForgeSpawnEggItem(EntityRegistry.ASSIMILATED_ENDERMAN_HEAD, 0x280428, 0x850d85, new Item.Properties()));
+    public static final RegistryObject<Item> ASSIMILATED_COW_HEAD_SPAWN_EGG = ITEMS.register("mutated_cow_head_spawn_egg",
+            () -> new ForgeSpawnEggItem(EntityRegistry.ASSIMILATED_COW_HEAD, 0x281604, 0x3f2306, new Item.Properties()));
     public static final RegistryObject<Item> ASSIMILATED_HUMAN_HEAD_SPAWN_EGG = ITEMS.register("mutated_human_head_spawn_egg",
             () -> new ForgeSpawnEggItem(EntityRegistry.ASSIMILATED_HUMAN_HEAD, 0x28283e, 0x345350, new Item.Properties()));
     public static final RegistryObject<Item> ASSIMILATED_VILLAGER_HEAD_SPAWN_EGG = ITEMS.register("mutated_villager_head_spawn_egg",

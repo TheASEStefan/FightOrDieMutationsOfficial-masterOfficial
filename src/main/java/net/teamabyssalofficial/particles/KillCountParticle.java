@@ -3,6 +3,7 @@ package net.teamabyssalofficial.particles;
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.client.particle.*;
 import net.minecraft.core.particles.SimpleParticleType;
+import net.minecraft.util.Mth;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
@@ -10,16 +11,16 @@ public class KillCountParticle extends TextureSheetParticle {
 
     KillCountParticle(ClientLevel pLevel, double pX, double pY, double pZ, double pXSpeed, double pYSpeed, double pZSpeed) {
         super(pLevel, pX, pY, pZ, pXSpeed, pYSpeed, pZSpeed);
-        float f = this.random.nextFloat() * 0.1F + 0.2F;
-        this.rCol = f;
-        this.gCol = f;
-        this.bCol = f;
+        this.rCol = 1f;
+        this.gCol = 1f;
+        this.bCol = 1f;
         this.setSize(0.02F, 0.02F);
-        this.quadSize *= this.random.nextFloat() * 0.6F + 0.5F;
-        this.xd *= (double)0.02F;
-        this.yd *= (double)0.02F;
-        this.zd *= (double)0.02F;
+        this.quadSize *= this.random.nextFloat() * 0.6F + 1.2F;
+        this.xd *= (double) 0.02F;
+        this.yd *= (double) 0.02F;
+        this.zd *= (double) 0.02F;
         this.lifetime = (int)(20.0D / (Math.random() * 0.8D + 0.2D));
+        this.gravity = -25f * Mth.PI * Mth.EPSILON;
     }
 
     public ParticleRenderType getRenderType() {

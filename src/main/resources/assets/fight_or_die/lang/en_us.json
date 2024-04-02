@@ -30,6 +30,7 @@
   "item.fight_or_die.mutated_player_spawn_egg": "Mutated Player Spawn Egg",
 
   "item.fight_or_die.mutated_human_head_spawn_egg": "Mutated Human Head Spawn Egg",
+  "item.fight_or_die.mutated_cow_head_spawn_egg": "Mutated Cow Head Spawn Egg",
   "item.fight_or_die.mutated_villager_head_spawn_egg": "Mutated Villager Head Spawn Egg",
   "item.fight_or_die.mutated_player_head_spawn_egg": "Mutated Player Head Spawn Egg",
   "item.fight_or_die.mutated_enderman_head_spawn_egg": "Mutated Enderman Head Spawn Egg",
@@ -72,6 +73,7 @@
   "entity.fight_or_die.mutated_player": "Mutated Player",
   "entity.fight_or_die.mutated_villager": "Mutated Villager",
 
+  "entity.fight_or_die.mutated_cow_head": "Mutated Cow Head",
   "entity.fight_or_die.mutated_human_head": "Mutated Human Head",
   "entity.fight_or_die.mutated_villager_head": "Mutated Villager Head",
   "entity.fight_or_die.mutated_player_head": "Mutated Player Head",
