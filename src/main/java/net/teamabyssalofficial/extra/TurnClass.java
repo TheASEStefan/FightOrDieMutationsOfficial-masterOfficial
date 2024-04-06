@@ -48,58 +48,58 @@ public class TurnClass {
                 }
                 if (assimilated.IgetAssimilationProgress() == 60) {
                     if (livingEntity.hasEffect(EffectRegistry.HIVE_SICKNESS.get())) {
-                        if (livingEntity instanceof Sheep sheep && FightOrDieMutationsConfig.SERVER.mutated_sheep_mutation.get()) {
+                        if (FightOrDieMutationsConfig.SERVER.mutated_sheep_mutations.get().contains(livingEntity.getEncodeId()) && FightOrDieMutationsConfig.SERVER.mutated_sheep_mutation.get()) {
                             AssimilatedSheepEntity assimilatedSheepEntity = EntityRegistry.ASSIMILATED_SHEEP.get().create(world);
                             assert assimilatedSheepEntity != null;
                             assimilatedSheepEntity.moveTo(x, y, z);
                             world.addFreshEntity(assimilatedSheepEntity);
-                            sheep.discard();
-                            sheep.level().playSound((Player) null, sheep.blockPosition(), SoundEvents.ZOMBIE_INFECT, SoundSource.HOSTILE, 1.3F, 1.0F);
-                            if (sheep.level() instanceof ServerLevel server) {
-                                server.sendParticles(ParticleTypes.EXPLOSION, sheep.getX(), sheep.getY() + 1, sheep.getZ(), 3, 0.4, 1.0, 0.4, 0);
+                            livingEntity.discard();
+                            livingEntity.level().playSound((Player) null, livingEntity.blockPosition(), SoundEvents.ZOMBIE_INFECT, SoundSource.HOSTILE, 1.3F, 1.0F);
+                            if (livingEntity.level() instanceof ServerLevel server) {
+                                server.sendParticles(ParticleTypes.EXPLOSION, livingEntity.getX(), livingEntity.getY() + 1, livingEntity.getZ(), 3, 0.4, 1.0, 0.4, 0);
                                 WorldDataRegistry worldDataRegistry = WorldDataRegistry.getWorldDataRegistry(server);
                                 int currentScore = worldDataRegistry.getScore();
                                 worldDataRegistry.setScore(currentScore + 2);
                             }
 
                         }
-                        else if (livingEntity instanceof Cow cow && FightOrDieMutationsConfig.SERVER.mutated_cow_mutation.get()) {
+                        else if (FightOrDieMutationsConfig.SERVER.mutated_cow_mutations.get().contains(livingEntity.getEncodeId()) && FightOrDieMutationsConfig.SERVER.mutated_cow_mutation.get()) {
                             AssimilatedCowEntity assimilatedCowEntity = EntityRegistry.ASSIMILATED_COW.get().create(world);
                             assert assimilatedCowEntity != null;
                             assimilatedCowEntity.moveTo(x, y, z);
                             world.addFreshEntity(assimilatedCowEntity);
-                            cow.discard();
-                            cow.level().playSound((Player) null, cow.blockPosition(), SoundEvents.ZOMBIE_INFECT, SoundSource.HOSTILE, 1.3F, 1.0F);
-                            if (cow.level() instanceof ServerLevel server) {
-                                server.sendParticles(ParticleTypes.EXPLOSION, cow.getX(), cow.getY() + 1, cow.getZ(), 3, 0.4, 1.0, 0.4, 0);
+                            livingEntity.discard();
+                            livingEntity.level().playSound((Player) null, livingEntity.blockPosition(), SoundEvents.ZOMBIE_INFECT, SoundSource.HOSTILE, 1.3F, 1.0F);
+                            if (livingEntity.level() instanceof ServerLevel server) {
+                                server.sendParticles(ParticleTypes.EXPLOSION, livingEntity.getX(), livingEntity.getY() + 1, livingEntity.getZ(), 3, 0.4, 1.0, 0.4, 0);
                                 WorldDataRegistry worldDataRegistry = WorldDataRegistry.getWorldDataRegistry(server);
                                 int currentScore = worldDataRegistry.getScore();
                                 worldDataRegistry.setScore(currentScore + 2);
                             }
                         }
-                        else if (livingEntity instanceof Pig pig && FightOrDieMutationsConfig.SERVER.mutated_pig_mutation.get()) {
+                        else if (FightOrDieMutationsConfig.SERVER.mutated_pig_mutations.get().contains(livingEntity.getEncodeId()) && FightOrDieMutationsConfig.SERVER.mutated_pig_mutation.get()) {
                             AssimilatedPigEntity assimilatedPigEntity = EntityRegistry.ASSIMILATED_PIG.get().create(world);
                             assert assimilatedPigEntity != null;
                             assimilatedPigEntity.moveTo(x, y, z);
                             world.addFreshEntity(assimilatedPigEntity);
-                            pig.discard();
-                            pig.level().playSound((Player) null, pig.blockPosition(), SoundEvents.ZOMBIE_INFECT, SoundSource.HOSTILE, 1.3F, 1.0F);
-                            if (pig.level() instanceof ServerLevel server) {
-                                server.sendParticles(ParticleTypes.EXPLOSION, pig.getX(), pig.getY() + 1, pig.getZ(), 3, 0.4, 1.0, 0.4, 0);
+                            livingEntity.discard();
+                            livingEntity.level().playSound((Player) null, livingEntity.blockPosition(), SoundEvents.ZOMBIE_INFECT, SoundSource.HOSTILE, 1.3F, 1.0F);
+                            if (livingEntity.level() instanceof ServerLevel server) {
+                                server.sendParticles(ParticleTypes.EXPLOSION, livingEntity.getX(), livingEntity.getY() + 1, livingEntity.getZ(), 3, 0.4, 1.0, 0.4, 0);
                                 WorldDataRegistry worldDataRegistry = WorldDataRegistry.getWorldDataRegistry(server);
                                 int currentScore = worldDataRegistry.getScore();
                                 worldDataRegistry.setScore(currentScore + 2);
                             }
                         }
-                        else if (livingEntity instanceof Fox fox && FightOrDieMutationsConfig.SERVER.mutated_fox_mutation.get()) {
+                        else if (FightOrDieMutationsConfig.SERVER.mutated_fox_mutations.get().contains(livingEntity.getEncodeId()) && FightOrDieMutationsConfig.SERVER.mutated_fox_mutation.get()) {
                             AssimilatedFoxEntity assimilatedFoxEntity = EntityRegistry.ASSIMILATED_FOX.get().create(world);
                             assert assimilatedFoxEntity != null;
                             assimilatedFoxEntity.moveTo(x, y, z);
                             world.addFreshEntity(assimilatedFoxEntity);
-                            fox.discard();
-                            fox.level().playSound((Player) null, fox.blockPosition(), SoundEvents.ZOMBIE_INFECT, SoundSource.HOSTILE, 1.3F, 1.0F);
-                            if (fox.level() instanceof ServerLevel server) {
-                                server.sendParticles(ParticleTypes.EXPLOSION, fox.getX(), fox.getY() + 1, fox.getZ(), 3, 0.4, 1.0, 0.4, 0);
+                            livingEntity.discard();
+                            livingEntity.level().playSound((Player) null, livingEntity.blockPosition(), SoundEvents.ZOMBIE_INFECT, SoundSource.HOSTILE, 1.3F, 1.0F);
+                            if (livingEntity.level() instanceof ServerLevel server) {
+                                server.sendParticles(ParticleTypes.EXPLOSION, livingEntity.getX(), livingEntity.getY() + 1, livingEntity.getZ(), 3, 0.4, 1.0, 0.4, 0);
                                 WorldDataRegistry worldDataRegistry = WorldDataRegistry.getWorldDataRegistry(server);
                                 int currentScore = worldDataRegistry.getScore();
                                 worldDataRegistry.setScore(currentScore + 2);

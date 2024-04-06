@@ -3,6 +3,7 @@ package net.teamabyssalofficial.entity.custom;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Mob;
@@ -149,6 +150,12 @@ public class MalruptorEntity extends Infector implements GeoEntity, Evolved, Hun
             }
         });
         this.goalSelector.addGoal(8, new RandomLookAroundGoal(this));
+        this.goalSelector.addGoal(10, new MalruptorInfectsGoal(this, 1.3, Animal.class, this::infectPredicate) {
+            @Override
+            public boolean canUse() {
+                return super.canUse() && this.mob.getTarget() == null && this.partner != null && !this.partner.hasEffect(EffectRegistry.HIVE_SICKNESS.get()) && (this.mob.level() instanceof ServerLevel world && WorldDataRegistry.getWorldDataRegistry(world).getPhase() < 5);
+            }
+        });
         this.goalSelector.addGoal(10, new MalruptorInfectsGoal(this, 1.3, Cow.class) {
             @Override
             public boolean canUse() {
@@ -183,6 +190,10 @@ public class MalruptorEntity extends Infector implements GeoEntity, Evolved, Hun
 
     private boolean targetPredicate(LivingEntity liv) {
         return !(liv instanceof Mutated || liv instanceof AdvancedMutated || liv instanceof Parasite || liv instanceof Infector || liv instanceof Head || liv instanceof Animal || liv instanceof Squid || liv instanceof ArmorStand || liv instanceof AbstractFish || liv instanceof Bat || FightOrDieMutationsConfig.SERVER.blacklist.get().contains(liv.getEncodeId()));
+    }
+
+    private boolean infectPredicate(LivingEntity liv) {
+        return FightOrDieMutationsConfig.SERVER.springer_targeted_infection_entities.get().contains(liv.getEncodeId());
     }
 
 

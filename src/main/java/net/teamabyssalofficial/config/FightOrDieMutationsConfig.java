@@ -95,6 +95,15 @@ public class FightOrDieMutationsConfig {
         public final ForgeConfigSpec.ConfigValue<Boolean> mutated_pig_mutation;
         public final ForgeConfigSpec.ConfigValue<Boolean> mutated_fox_mutation;
         public final ForgeConfigSpec.ConfigValue<Boolean> mutated_creeper_mutation;
+        public final ForgeConfigSpec.ConfigValue<List<? extends String>> mutated_human_mutations;
+        public final ForgeConfigSpec.ConfigValue<List<? extends String>> mutated_villager_mutations;
+        public final ForgeConfigSpec.ConfigValue<List<? extends String>> mutated_cow_mutations;
+        public final ForgeConfigSpec.ConfigValue<List<? extends String>> mutated_sheep_mutations;
+        public final ForgeConfigSpec.ConfigValue<List<? extends String>> mutated_pig_mutations;
+        public final ForgeConfigSpec.ConfigValue<List<? extends String>> mutated_fox_mutations;
+        public final ForgeConfigSpec.ConfigValue<List<? extends String>> mutated_enderman_mutations;
+        public final ForgeConfigSpec.ConfigValue<List<? extends String>> mutated_creeper_mutations;
+        public final ForgeConfigSpec.ConfigValue<List<? extends String>> springer_targeted_infection_entities;
         public final ForgeConfigSpec.ConfigValue<Boolean> random_disturbing_sounds;
         public final ForgeConfigSpec.ConfigValue<Boolean> stomach_growl_detection;
         public final ForgeConfigSpec.ConfigValue<Boolean> enable_horde;
@@ -189,7 +198,7 @@ public class FightOrDieMutationsConfig {
 
             this.blacklist = builder.defineList("Mobs Not Targeted",
                     Lists.newArrayList(
-                            "minecraft:squid","minecraft:bat","minecraft:armor_stand", "minecraft:creeper", "minecraft:ghast", "minecraft:falling_block") , o -> o instanceof String);
+                            "minecraft:squid", "minecraft:bat", "minecraft:armor_stand", "minecraft:creeper", "minecraft:ghast", "minecraft:falling_block", "minecraft:abstract_arrow", "minecraft:arrow", "minecraft:spectral_arrow", "minecraft:trident") , o -> o instanceof String);
 
             builder.pop();
             builder.push("Horde");
@@ -220,6 +229,44 @@ public class FightOrDieMutationsConfig {
             this.mutated_player_mutation = builder.comment("Default true").define("Should players convert into their mutated counterpart?",true);
             this.mutated_creeper_mutation = builder.comment("Default true").define("Should creepers convert into their mutated counterpart?",true);
             this.mutated_enderman_mutation = builder.comment("Default true").define("Should endermans convert into their mutated counterpart?",true);
+
+            this.springer_targeted_infection_entities = builder.defineList("Mobs that the springer will try to infect (Animals only)",
+                    Lists.newArrayList(
+                            "minecraft:sheep", "minecraft:cow", "minecraft:fox", "minecraft:pig") , o -> o instanceof String);
+
+            this.mutated_human_mutations = builder.defineList("Mobs that can turn into Mutated Humans",
+                    Lists.newArrayList(
+                            "minecraft:zombie") , o -> o instanceof String);
+
+            this.mutated_villager_mutations = builder.defineList("Mobs that can turn into Mutated Villagers",
+                    Lists.newArrayList(
+                            "minecraft:villager", "rotted:farmer", "guardvillagers:guard") , o -> o instanceof String);
+
+            this.mutated_cow_mutations = builder.defineList("Mobs that can turn into Mutated Cows",
+                    Lists.newArrayList(
+                            "minecraft:cow") , o -> o instanceof String);
+
+            this.mutated_sheep_mutations = builder.defineList("Mobs that can turn into Mutated Sheeps",
+                    Lists.newArrayList(
+                            "minecraft:sheep") , o -> o instanceof String);
+
+            this.mutated_pig_mutations = builder.defineList("Mobs that can turn into Mutated Pigs",
+                    Lists.newArrayList(
+                            "minecraft:pig") , o -> o instanceof String);
+
+            this.mutated_fox_mutations = builder.defineList("Mobs that can turn into Mutated Foxes",
+                    Lists.newArrayList(
+                            "minecraft:cow") , o -> o instanceof String);
+
+            this.mutated_enderman_mutations = builder.defineList("Mobs that can turn into Mutated Endermans",
+                    Lists.newArrayList(
+                            "minecraft:enderman") , o -> o instanceof String);
+
+            this.mutated_creeper_mutations = builder.defineList("Mobs that can turn into Mutated Creepers",
+                    Lists.newArrayList(
+                            "minecraft:creeper") , o -> o instanceof String);
+
+
             builder.pop();
             builder.push("Ambience");
             this.random_disturbing_sounds = builder.comment("Default true").define("Should players hear disturbing sounds from time to time? (Note: this affects only one random player from the server)",true);
