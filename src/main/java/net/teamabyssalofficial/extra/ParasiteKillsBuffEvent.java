@@ -18,6 +18,10 @@ public class ParasiteKillsBuffEvent {
     @SubscribeEvent
     public static void ParasiteBuffEvent(LivingDeathEvent event) {
         if (event != null && event.getEntity() != null && !event.getEntity().level().isClientSide && event.getSource().getEntity() != null) {
+            if(!(event.getSource().getEntity() instanceof LivingEntity)) {
+                return;
+            }
+            
             LivingEntity entity = (LivingEntity) event.getSource().getEntity();
             Level world = entity.level();
             WorldDataRegistry worldDataRegistry = WorldDataRegistry.getWorldDataRegistry((ServerLevel) world);
